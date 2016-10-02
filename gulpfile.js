@@ -7,6 +7,12 @@ var autoprefixer = require('autoprefixer'),
   rename = require('gulp-rename'),
   sourcemaps = require('gulp-sourcemaps');
 
+gulp.task('default', ['css']);
+
+gulp.task('watch', function() {
+  gulp.watch(['src/css/*.css', '*.css'], ['css']);
+});
+
 gulp.task('css', function() {
   var processors = [
     precss(),
