@@ -1,13 +1,11 @@
-var gulp = require('gulp'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
+var autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
-  sourcemaps = require('gulp-sourcemaps'),
-  precss = require('precss'),
-  rename = require('gulp-rename')
+  gulp = require('gulp'),
+  postcss = require('gulp-postcss'),
   postcssimport = require('postcss-import');
-  // stylus = require('gulp-stylus'),
-  // poststylus = require('poststylus');
+  precss = require('precss'),
+  rename = require('gulp-rename'),
+  sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('css', function() {
   var processors = [
@@ -22,14 +20,4 @@ gulp.task('css', function() {
     .pipe(rename('style.css'))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('.'));
-});
-
-gulp.task('stylus', function() {
-  gulp.src('style.styl')
-    .pipe(stylus({
-      use: [
-        poststylus(['autoprefixer'])
-      ]
-    }))
-    .pipe(gulp.dest('./style.css'));
 });
