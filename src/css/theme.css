@@ -2,4 +2,5 @@
  Theme Name: Crew Hawaii
  Template: starter-theme-master
 */
-@import "base.css";
+@import "variables";
+@import "base";

@@ -3,8 +3,8 @@ html, body {
   background-color: #000;
 }
 h3 {
-  color: red;
+  color: $red;
 }
-a {
+a, a:hover, a:active, a:focus, a:visited {
   color: #fff;
 }
