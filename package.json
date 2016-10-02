@@ -21,9 +21,9 @@
     "cssnano": "^3.7.5",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.5.0",
-    "poststylus": "^0.2.3",
+    "postcss-import": "^8.1.2",
     "precss": "^1.4.0"
   }
 }

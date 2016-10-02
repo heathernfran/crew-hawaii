@@ -3,19 +3,25 @@ var gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
-  stylus = require('gulp-stylus'),
-  poststylus = require('poststylus');
+  precss = require('precss'),
+  rename = require('gulp-rename')
+  postcssimport = require('postcss-import');
+  // stylus = require('gulp-stylus'),
+  // poststylus = require('poststylus');
 
 gulp.task('css', function() {
   var processors = [
+    precss(),
+    postcssimport(),
     autoprefixer({browsers: ['last 1 version']}),
     cssnano(),
   ];
-  return gulp.src('./src/**/*.css')
+  return gulp.src(['src/css/*.css', '*.css'])
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
+    .pipe(rename('style.css'))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('stylus', function() {
