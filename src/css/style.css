@@ -2,3 +2,7 @@
  Theme Name: Crew Hawaii
  Template: starter-theme-master
 */
+html, body {
+  color: #fff;
+  background-color: #000;
+}
