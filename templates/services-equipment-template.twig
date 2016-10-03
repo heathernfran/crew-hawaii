@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+  {% block content %}
+
+  <!-- <h1>{{ services_equipment.title }}</h1> -->
+
+  {% for se in services_equipment.get_field('services_equipment_repeater') %}
+    <h2>{{ se.name }}</h2>
+    <p>
+      {{ se.description }}
+    </p>
+    {% for se_image in se.gallery %}
+      <img src="{{ TimberImage(se_image) }}" alt="" />
+    {% endfor %}
+  {% endfor %}
+
+  {% endblock %}
