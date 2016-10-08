@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+  {% block content %}
+
+  {% for rate in rates.get_field('rates_repeater') %}
+    <h2>{{ rate.name }}</h2>
+    <p>
+      {{ rate.description }}
+    </p>
+    <div>
+      {{ rate.cost }}
+    </div>
+  {% endfor %}
+
+  {% endblock %}
