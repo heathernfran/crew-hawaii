@@ -1,6 +1,7 @@
 html, body {
   color: #fff;
   background-color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 h3 {
   color: $red;
