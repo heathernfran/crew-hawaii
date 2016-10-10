@@ -28,6 +28,7 @@
     "precss": "^1.4.0"
   },
   "dependencies": {
-    "basscss": "^8.0.2"
+    "basscss": "^8.0.2",
+    "semantic-ui": "^2.2.4"
   }
 }
