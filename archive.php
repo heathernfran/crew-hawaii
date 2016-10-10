@@ -14,7 +14,7 @@
  * @since   Timber 0.2
  */
 
-$templates = array( 'archive.twig', 'project.twig' );
+$templates = array( 'archive.twig', 'index.twig', 'project.twig' );
 
 $context = Timber::get_context();
 
@@ -38,6 +38,8 @@ if ( is_day() ) {
 // Check for post type, to determine which index template to display
 if ($data['title'] == 'Project') {
   array_unshift( $templates, 'project.twig' );
+} else {
+  array_unshift( $templates, 'index.twig' );
 }
 
 $context['posts'] = Timber::get_posts();
